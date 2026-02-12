@@ -1,40 +1,40 @@
 # AutoLISP Bot
 
-AI-powered assistant for structural engineers. Generates AutoLISP scripts for AutoCAD reinforcement detailing.
+AI-ассистент для проектировщиков-конструкторов. Генерирует скрипты AutoLISP для армирования в AutoCAD.
 
-## What is this?
+## Что это?
 
-A system prompt + examples for an AI bot that helps structural engineers (who are NOT programmers) generate AutoLISP scripts by describing tasks in plain language.
+Системный промпт + примеры для AI-бота, который помогает проектировщикам (не программистам) генерировать AutoLISP скрипты, описывая задачу обычным языком.
 
-**Example:** "Draw a beam cross-section with 4d16 bottom reinforcement, 2d12 top, stirrups d8 step 200mm" → ready `.lsp` script.
+**Пример:** "Нарисуй сечение балки 300x600 с 4d16 внизу, 2d12 вверху, хомуты d8 шаг 200" → готовый `.lsp` скрипт.
 
-## Files
+## Файлы
 
-- `system-prompt.md` — System prompt with AutoCAD commands, DXF codes, Russian building codes (SP 63, GOST 34028), reinforcement typification rules
-- `examples.md` — 9 example scripts: column grids, beam sections, stirrups, rebar layouts, specifications, mass calculator, rebar typification
+- `system-prompt.md` — Системный промпт: команды AutoCAD, DXF-коды, нормативы (СП 63, ГОСТ 34028), правила типизации армирования
+- `examples.md` — 9 примеров скриптов: сетки колонн, сечения балок, хомуты, раскладка арматуры, спецификации, калькулятор массы, типизация каркасов
 
-## Coverage
+## Что внутри
 
 ### AutoLISP
-- Drawing commands (LINE, CIRCLE, DONUT, PLINE, HATCH, INSERT, ARRAY)
-- DXF codes for reading/modifying objects
-- Layer management for reinforcement drawings
-- Interactive input (getpoint, getreal, getint)
+- Команды черчения (LINE, CIRCLE, DONUT, PLINE, HATCH, INSERT, ARRAY)
+- DXF-коды для чтения/модификации объектов
+- Управление слоями для чертежей армирования
+- Интерактивный ввод (getpoint, getreal, getint)
 
-### Russian Building Codes
-- **GOST 34028-2016** — Rebar grades: diameters, cross-sections, mass per meter
-- **SP 63.13330.2018** — Concrete cover, bar spacing, anchorage lengths by concrete class (B15-B35), lap splice lengths
-- Rebar classes: A240, A400, A500C, A600
+### Нормативы
+- **ГОСТ 34028-2016** — сортамент арматуры: диаметры, площади сечений, масса погонного метра
+- **СП 63.13330.2018** — защитный слой, шаг арматуры, длина анкеровки по классам бетона (B15-B35), длина нахлёста
+- Классы арматуры: A240, A400, A500С, A600
 
-### Reinforcement Typification
-- Grouping parameters (diameter, class, count, length, stirrup spacing)
-- Naming convention (KR, KP, S, D)
-- Position numbering rules
+### Типизация армирования
+- Параметры группировки (диаметр, класс, количество, длина, шаг хомутов)
+- Маркировка (КР, КП, С, Д)
+- Правила нумерации позиций
 
-## Status
+## Статус
 
-Work in progress. Waiting for real-world examples from a structural engineering team to refine the prompt.
+В разработке. Ждём реальные примеры от проектировщиков для доработки промпта.
 
-## License
+## Лицензия
 
 MIT
